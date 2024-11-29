@@ -168,7 +168,7 @@ func (v Value) marshallArray() []byte {
 	bytes = append(bytes, strconv.Itoa(len)...)
 	bytes = append(bytes, '\r', '\n')
 
-	for i := 0; i <= len; i++ {
+	for i := 0; i < len; i++ {
 		bytes = append(bytes, v.array[i].Marshall()...)
 	}
 
